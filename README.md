@@ -18,7 +18,13 @@ Usage:
 
 ```bash
 ./1-sequential-test.sh --port 9000 --url http://xcal1.vodafone.co.uk/5MB.zip --requests 10 --timeout 60
+```
+```bash
 ./2-concurrent-test.sh --port 9000 --url http://weather.nsu.ru/ --requests 50 --timeout 10 --concurrency 20
+```
+```bash
 ./3-cache-invalidation.sh --port 9000 --url http://ascii.textfiles.com/ --requests 10 --timeout 10
+```
+```bash
 ./4-parallel-clients.sh --port 9000 --url http://68k.news/ --requests 500 --timeout 10
 ```
