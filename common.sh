@@ -142,12 +142,13 @@ make_request() {
 export -f make_request
 
 check_files() {
-	local number_of_files=${1:-$REQUESTS}
+	local start=${1:-1}
+	local end=${2:-$REQUESTS}
 	local failed=false
 
-	echo -e "\n${Blu}Checking results: ${RCol}"
+	echo -e "\n${Blu}Checking results (from ${start} to ${end}):${RCol}"
 
-	for i in `seq ${number_of_files}`; do
+	for i in `seq ${start} ${end}`; do
 		REF_FILE="${FILE_PATH}${REF_NUM}"
 		FILE_TO_CHECK="${FILE_PATH}${i}"
 

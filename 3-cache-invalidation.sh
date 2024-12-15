@@ -21,4 +21,4 @@ for i in `seq $(( REQUESTS + 1)) $(( REQUESTS * 2))`; do
 	make_request "${i}" "${PROXY_CURL_CMD}"
 done
 
-check_files $(( REQUESTS * 2))
+check_files 1 $(( REQUESTS * 2))
