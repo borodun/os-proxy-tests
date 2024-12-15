@@ -130,6 +130,7 @@ make_request() {
 	fi
 
 	if $INTERACTIVE; then
+		clear_last_lines 1
 		echo "${NUM}: ${duration}s"
 	else
 		echo "${duration}s"
