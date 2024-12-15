@@ -4,14 +4,14 @@ export INTERACTIVE=false
 
 source common.sh
 
-pint-info
+print_info
 init
 
 make_parallel_request() {
 	local NUM=$1
 	local CMD=$2
 
-	output=$(INTERACTIVE=false make-request "${NUM}" "${CMD}" 2>&1)
+	output=$(INTERACTIVE=false make_request "${NUM}" "${CMD}" 2>&1)
 
 	echo $output
 }
@@ -23,4 +23,4 @@ done
 
 wait
 
-check-files
+check_files

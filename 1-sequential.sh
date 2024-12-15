@@ -2,12 +2,12 @@
 
 source common.sh
 
-pint-info
+print_info
 init
 
 echo -e "\n${Blu}Downloading samples through proxy:${RCol}"
 for i in `seq ${REQUESTS}`; do
-	make-request "${i}" "${PROXY_CURL_CMD}"
+	make_request "${i}" "${PROXY_CURL_CMD}"
 done
 
-check-files
+check_files

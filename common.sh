@@ -89,12 +89,12 @@ init() {
 	mkdir -p ${RESULTS_DIR}
 
 	echo -e "\n${Blu}Downloading reference file:${RCol}"
-	make-request "${REF_NUM}" "${REF_CURL_CMD}"
+	make_request "${REF_NUM}" "${REF_CURL_CMD}"
 }
 
 export -f init
 
-pint-info() {
+print_info() {
 	export NUM=0
 
 	echo -en "${Pur}REFERENCE CURL CMD: ${RCol}\t"
@@ -104,9 +104,9 @@ pint-info() {
 	echo "$(echo ${PROXY_CURL_CMD} | envsubst)"
 }
 
-export -f pint-info
+export -f print_info
 
-make-request() {
+make_request() {
 	local NUM=$1
 	local CMD=$2
 
@@ -138,9 +138,9 @@ make-request() {
 	return 0
 }
 
-export -f make-request
+export -f make_request
 
-check-files() {
+check_files() {
 	local number_of_files=${1:-$REQUESTS}
 	local failed=false
 
@@ -170,5 +170,5 @@ check-files() {
 	echo -e "${BGre}PASSED${RCol}"
 }
 
-export -f check-files
+export -f check_files
 
