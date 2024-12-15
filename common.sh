@@ -5,12 +5,12 @@ source colors.sh
 export PROXY_HOST="localhost"
 export PROXY_PORT="8080"
 
-export URL="http://ascii.textfiles.com/"
+export URL="http://xcal1.vodafone.co.uk/10MB.zip"
 export REQUESTS="10"
 
 CONCURRENCY=10
 
-CMD_TIMEOUT_S=5
+CMD_TIMEOUT_S=10
 
 POSITIONAL_ARGS=()
 
