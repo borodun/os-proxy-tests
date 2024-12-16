@@ -14,6 +14,14 @@ Usage:
 - `--timeout` - curl timeout (see `curl --max-time`). Default: 10.
 - `--concurrency` - number of parallel requests if available for test. Default: 10.
 
+## Dependencies
+
+Basic calculator:
+
+```bash
+sudo apt install bc
+```
+
 ## Examples
 
 ```bash
